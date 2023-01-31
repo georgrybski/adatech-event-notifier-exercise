@@ -1,25 +1,20 @@
 package br.com.ada.georg.eventnotifier.model;
 
-import java.time.LocalDateTime;
-
 public class Notification {
-    private String name;
     private String message;
 
-    private String dateTime;
+    private String date;
 
-    public Notification(String name, String message, String dateTime) {
-        this.name = name;
+    public Notification(String message, String date) {
         this.message = message;
-        this.dateTime = dateTime;
+        this.date = date;
     }
 
-    public String getName() {
-        return name;
+    public String getMessage() {
+        return message;
     }
 
-    @Override
-    public String toString() {
-        return name + " recieved a message: -> " + message + " - " + dateTime;
+    public String getDate() {
+        return date;
     }
 }
