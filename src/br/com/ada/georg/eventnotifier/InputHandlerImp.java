@@ -11,22 +11,22 @@ public class InputHandlerImp implements InputHandler {
 
     public static final DateTimeFormatter FORMATTER
             = DateTimeFormatter.ofPattern("dd-MM-uuuu HH:mm");
-    public Integer getNumberOfMessages(){
-        System.out.println("Insert the number of notifications you would like to send (0 to quit):");
+    public Integer getNumberOfPeople(){
+        System.out.println("Digite o número de pessoas que irá receber a notificação");
         return getInteger(scanner);
     }
 
     public Notification getNotification() {
-        return new Notification(getPersonName(), getMessage(), LocalDateTime.now().format(FORMATTER));
+        return new Notification(getMessage(), LocalDateTime.now().format(FORMATTER));
     }
 
     public String getPersonName() {
-        System.out.println("Insert the person's name:");
+        System.out.println("Digite o nome de uma pessoa:");
         return getInput(scanner);
     }
 
     public String getMessage() {
-        System.out.println("Insert the notification message:");
+        System.out.println("Digite a mensagem da notificação:");
         return getInput(scanner);
     }
 }
